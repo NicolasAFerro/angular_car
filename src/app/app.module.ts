@@ -7,6 +7,7 @@ import { CarComponent } from './components/car/car.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CarsComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+
   ],
   providers: [
     provideClientHydration(withEventReplay())

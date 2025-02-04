@@ -1,4 +1,4 @@
-<app-car></app-car>
+<app-car [carroFilho]="newCar"></app-car>
 <div
   class="container-sm p-1 w-md-100 w-75 shadow-sm p-3 mb-5 bg-body-secondary"
 >
@@ -20,7 +20,7 @@
         <td>{{ car.name }}</td>
         <td>{{ car.automaker }}</td>
         <td>{{ car.price }}</td>
-        <td>{{ car.ano }}</td>
+        <td>{{ car.year }}</td>
         <td style="border: solid 1px red" class="col-2">
           <button class="btn btn-success me-3" (click)="updateCar(car)">
             Alterar

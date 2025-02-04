@@ -3,5 +3,5 @@ export interface Car {
   name: string;
   automaker: string;
   price: number;
-  ano: number;
+  year: number;
 }
