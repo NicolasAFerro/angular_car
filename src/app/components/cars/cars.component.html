@@ -22,8 +22,12 @@
         <td>{{ car.price }}</td>
         <td>{{ car.ano }}</td>
         <td style="border: solid 1px red" class="col-2">
-          <button class="btn btn-success me-3">Alterar</button>
-          <button class="btn btn-danger">Excluir</button>
+          <button class="btn btn-success me-3" (click)="updateCar(car)">
+            Alterar
+          </button>
+          <button class="btn btn-danger" (click)="removeCar(car)">
+            Excluir
+          </button>
         </td>
       </tr>
     </tbody>

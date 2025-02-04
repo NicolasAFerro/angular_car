@@ -36,4 +36,11 @@ export class CarsComponent {
     },
   ];
 
+  updateCar(carro:Car){
+    console.log('update:'+ carro.name);
+  }
+  removeCar(carro:Car){
+    console.log('remover: '+carro.name);
+  }
+
 }
