@@ -40,12 +40,16 @@ export class CarsComponent {
 
   updateCar(carro:Car){
     this.newCar=carro;
+
     console.log("new car: "+this.newCar.name);
     console.log('update:'+ carro.name);
 
   }
   removeCar(carro:Car){
     console.log('remover: '+carro.name);
+  }
+  saveCar(){
+   console.log('to aqui');
   }
 
 }

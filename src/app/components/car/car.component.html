@@ -1,6 +1,6 @@
 <div class="container-sm p-1 w-md-100 w-75 shadow-sm p-3 bg-body-secondary">
   <h4>Cadastro de Carros</h4>
-  <form>
+  <form action="">
     <div class="row mb-3">
       <label for="carName" class="col-sm-2 col-form-label">Nome: </label>
       <div class="col-sm-10">
@@ -48,6 +48,6 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button (click)="save()" class="btn btn-primary">Salvar</button>
   </form>
 </div>
