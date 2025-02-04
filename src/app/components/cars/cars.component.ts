@@ -13,6 +13,8 @@ import{Car} from '../../Car';
 export class CarsComponent {
 
   newCar: Car = {} as Car;
+  isUpdate: boolean = false;
+  idCount: number=4;
   cars: Car[] = [
     {
       id: 1,
@@ -22,14 +24,14 @@ export class CarsComponent {
       year: 2011,
     },
     {
-      id: 1,
+      id: 2,
       name: 'Palio',
       automaker: 'Fiat',
       price: 12000,
       year: 2001,
     },
     {
-      id: 1,
+      id: 3,
       name: 'Etios',
       automaker: 'Toyota',
       price: 40000,
@@ -40,15 +42,23 @@ export class CarsComponent {
 
   updateCar(carro:Car){
     this.newCar=carro;
-
+    this.isUpdate = true;
     console.log("new car: "+this.newCar.name);
     console.log('update:'+ carro.name);
 
   }
   removeCar(carro:Car){
+    this.cars = this.cars.filter((b) => b !== carro);
     console.log('remover: '+carro.name);
   }
   saveCar(){
+    if(!this.isUpdate){
+      this.newCar.id = this.idCount;
+      this.idCount++;
+      this.cars.push(this.newCar);
+    }
+    this.newCar = {} as Car; //zera a variavel
+    this.isUpdate = false;
    console.log('to aqui');
   }
 
